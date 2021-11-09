@@ -5,7 +5,9 @@ import './Services.css';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('services.json')
+        // fetch('services.json')
+        //Database theke load korbo akhon but deploy e kaj korbe na
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])
